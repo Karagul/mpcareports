@@ -1,5 +1,5 @@
 # mpcareports
-Report templates for R Markdown documents
+:bookmark_tabs: Report templates for R Markdown documents
 
 
 ## What is R Markdown?
