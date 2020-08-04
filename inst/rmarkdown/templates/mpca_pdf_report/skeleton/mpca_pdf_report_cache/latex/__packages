@@ -1,0 +1,15 @@
+base
+mpcadb
+ggplot2
+mncolors
+mpcaej
+leaflet
+sf
+tidyverse
+tibble
+tidyr
+readr
+purrr
+dplyr
+stringr
+forcats

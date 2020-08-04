@@ -1,0 +1,16 @@
+base
+mpcadb
+ggplot2
+mncolors
+hrbrthemes
+mpcaej
+leaflet
+sf
+tidyverse
+tibble
+tidyr
+readr
+purrr
+dplyr
+stringr
+forcats

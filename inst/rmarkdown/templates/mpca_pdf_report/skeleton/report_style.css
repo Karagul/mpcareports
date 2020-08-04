@@ -1,0 +1,42 @@
+code {color: #535353;}
+
+hr {
+  margin-top: -30px;
+  margin-bottom: 24px;
+  color: #2a5ea9;
+  height: 0.12em;
+  background-color: #2a5ea9;
+}
+
+two-line {
+  margin-top: -26px;
+  margin-bottom: 20px;
+
+}
+
+.title {
+  font-size: 55px !important;
+  margin-top: 22px;
+  margin-bottom: 70px;
+}
+
+h1 {
+  font-size: 41px !important;
+  margin-top: 72px;
+  margin-bottom: 35px;
+}
+
+h2 {
+  margin-top: 64px;
+  margin-bottom: 26px;
+}
+
+
+h3 {
+  margin-top: 26px;
+  margin-bottom: 16px;
+}
+
+body {
+  font-size: 18px;
+}
