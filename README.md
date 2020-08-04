@@ -1,5 +1,5 @@
 # mpcareports
-:bookmark_tabs: Report templates for R Markdown documents
+:bookmark_tabs: Report templates for R Markdown documents |  https://mpca-data.github.io/mpcareports/web/
 
 
 ## What is R Markdown?
@@ -26,5 +26,12 @@ remotes::install_github("MPCA-data/mpcareports")
 
 ## Use
 
-After installing and restarting RStudio, when you create a new RMarkdown file RStudio you can now select the bottom option for "Template" to see several "MPCA report" options to choose from.
+After installing and restarting RStudio, when you create a new RMarkdown file RStudio you can now select the bottom option for "Template" to see several _MPCA report_ options to choose from. Here's a snippet of the Web report below. You can view the full version at https://mpca-data.github.io/mpcareports/web/.
 
+![](web/web_report_snip.png)
+
+...  
+
+---
+
+<br>
