@@ -55,23 +55,20 @@ data <- read_csv("")
 ```
 
 
-## Facility IDs pulled from MPCA's local TEMPO database. 
+## DELTA is where data lives 
 
-Explore what lives in DELTA on the [RAINIER pages](http://rainier/documentation/DataDictionary/DELTAW/index.html)
+Explore what lives in DELTA on the [RAINIER pages](http://rainier/documentation/DataDictionary/DELTAW/index.html).
 
-
-We used the `mpcadb` package to access TEMPO.
+Facility locations were pulled from MPCA's TEMPO database. You can use the `mpcadb` package to access TEMPO.
 
 ```{r mpcadb}
 library(mpcadb)
 
 ## TEMPO AI's
 # Complete list of the Agency Interest names from TEMPO with `get_ai()`.
-ai_names <- get_ai(ai = c(1:8, 56, 878), keep_alt_names = T)
+ai_names <- get_ai(ai = c(1:4, 56, 878), keep_alt_names = T)
 
 knitr::kable(head(ai_names))
-
-ai_names <- get_ai(ai = c(441, 288), keep_alt_names = T)
 
 ```
 
@@ -79,9 +76,9 @@ ai_names <- get_ai(ai = c(441, 288), keep_alt_names = T)
 
 <br>
 
-## _(help!)_ Access data from MN's GIS Rest API
+## _(help)_ Access spatial data from MN's GIS Rest API
 
-## _(help!)_ Read data from blackholes: PDF's, Excel, Access 
+## _(help)_ Read data from: PDF's, Excel, Access 
 
 <br>
 
@@ -260,7 +257,7 @@ leaflet(sites) %>%
 ```
 
 
-# Collapsible / Hidden content
+# Collapsible or drop-down content
 
 Want to hide a long list or table until the reader chooses to look at it? You can use `<summary>` for that. Adding the following creates a drop-down window in your document that will start collapsed and expand when the reader clicks on it.
 
@@ -299,9 +296,9 @@ __And here it is:__
 
 ---
 
-# _(help!)_ Non-detect and Censored data summaries
+# _(help)_ Non-detect and Censored data summaries
 
-# _(help!)_ Multi-variate predictions
+# _(help)_ Multi-variate predictions
 
 # Conclusions
 
