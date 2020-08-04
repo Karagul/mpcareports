@@ -16,7 +16,7 @@ Install `mpcareports` from GitHub:
 
 ``` r
 # First install the 'devtools' package
-library(devtools)
+library(remotes)
 
 # Install the development pkg from GitHub
 remotes::install_github("MPCA-data/mpcareports")
