@@ -15,10 +15,11 @@ For example:
 Install `mpcareports` from GitHub:
 
 ``` r
-# First install the 'devtools' package
+# 1. Install the 'devtools' package
+install.packages("devtools")
 library(remotes)
 
-# Install the development pkg from GitHub
+# 2. Install the development pkg from GitHub
 remotes::install_github("MPCA-data/mpcareports")
 ```
 
