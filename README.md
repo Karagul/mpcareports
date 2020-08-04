@@ -4,7 +4,7 @@
 
 ## What is R Markdown?
 
-If you're new to Markdown documents, an intro video and gallery of examples is here https://rmarkdown.rstudio.com/lesson-1.html. In short, it takes your R script and explanation text and turns it into a friendly readable document ready for public viewing. 
+If you're new to Markdown documents, here is a nice little intro video and gallery of examples https://rmarkdown.rstudio.com/lesson-1.html. In short, it takes your R script, comments, and charts and turns it into a friendly readable document ready for public viewing. 
 
 For example: 
 
