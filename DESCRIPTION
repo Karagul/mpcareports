@@ -13,6 +13,6 @@ Description: Markdown templates for environmental reporting. Includes:
 License: MIT License
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.1.0
+RoxygenNote: 7.1.1
 Imports: 
     tint
