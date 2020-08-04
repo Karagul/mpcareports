@@ -1,7 +1,7 @@
 ---
 title: "Our Project: Environmental Analysis"
 subtitle: "We may have done something great here"
-date:  'Last updated: `r format(Sys.Date(), "%Y-%m-%d")`'
+date:  'Last update: `r format(Sys.Date(), "%Y-%m-%d")`'
 author: "Yihui Xie & Rachel Carson | MPCA"
 output:
   tint::tintPdf: 

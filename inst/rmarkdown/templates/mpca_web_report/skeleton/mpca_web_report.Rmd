@@ -1,5 +1,5 @@
 ---
-title: "Our Project: Environmental Analysis"
+title: "Project One: Environmental Analysis"
 subtitle: "We may have done something great here"
 date:  'Last update: `r format(Sys.Date(), " %Y-%m-%d")`'
 author: "Yihui Xie & Rachel Carson | MPCA"
@@ -24,10 +24,9 @@ knitr::opts_chunk$set(message=F, warning=F)
 
 `r tint::newthought("The goal")` of this project is to identify the four Pokemon^[Pokemon are a new invasive species in MN. See [Pokemen explosion in MN](https://en.wikipedia.org/wiki/Pok%C3%A9mon).] that are polluting the local stream and causing it to glow purple on several occasions, documented on the following dates:
 
-- `July 12, 2020`
-- `July 18, 2020`
-- `July 23, 2020`
-
+1. `July 12, 2020`
+1. `July 23, 2020`
+1. `July 18, 2020`
 
 ## Project details
 
@@ -44,8 +43,8 @@ knitr::opts_chunk$set(message=F, warning=F)
 All data were downloaded from the following online resources:
 
 1. US EPA
-1. Wikipedia
-1. BBC.org
+1. MN GEO Commons
+1. TEMPO
 
 ```{r, message=F, warning=F, eval=F}
 library(tidyverse)
@@ -58,6 +57,9 @@ data <- read_csv("")
 
 ## Facility IDs pulled from MPCA's local TEMPO database. 
 
+Explore what lives in DELTA on the [RAINIER pages](http://rainier/documentation/DataDictionary/DELTAW/index.html)
+
+
 We used the `mpcadb` package to access TEMPO.
 
 ```{r mpcadb}
@@ -69,7 +71,10 @@ ai_names <- get_ai(ai = c(1:8, 56, 878), keep_alt_names = T)
 
 knitr::kable(head(ai_names))
 
+ai_names <- get_ai(ai = c(441, 288), keep_alt_names = T)
+
 ```
+
 
 
 <br>
@@ -87,6 +92,7 @@ knitr::kable(head(ai_names))
 |`geoid` |  Unique ID assigned to each Pokemon.      |  _`2430262`_ |    
 |`lat  ` |  Latitude coordinate of object's center.  | _`-94.021`_  |   
 |`lon  ` |  Longitude coordinate of object's center. |  _`44.521`_  | 
+
 
 # Data overview
 
@@ -167,7 +173,7 @@ $$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x)$$
 
 
 # A map to guide you
-```{r full-map, fig.width=10, fig.height=5, fig.fullwidth=T, fig.cap="Federally recognized tribal areas in Minnesota. _Ref. MPCA Geocommons..._", warning=F, message=F}
+```{r full-map, fig.width=10, fig.height=5, fig.fullwidth=T, fig.cap="**Fig 1.**  Federally recognized tribal areas \t\n _Ref. MPCA Geocommons..._", warning=F, message=F}
 library(mpcaej) #remotes::install_github("MPCA-data/mpcaej")
 library(leaflet)
 library(sf)

@@ -2,6 +2,7 @@ base
 mpcadb
 ggplot2
 mncolors
+hrbrthemes
 mpcaej
 leaflet
 sf
