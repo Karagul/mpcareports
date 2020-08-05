@@ -15,6 +15,23 @@ toc-title: "Table of Contents"
 bibliography: skeleton.bib
 ---
 
+
+```{r install-first, eval=F}
+# Heads up!!
+
+# Install these packages 
+# before running the report
+install.packages(c("hrbrthemes","dplyr",
+                   "ggplot2",
+                   "DT","devtools"))
+
+remotes::install_github("MPCA-data/mpcadb")
+remotes::install_github("MPCA-data/mncolors")
+remotes::install_github("MPCA-data/mpcaej")
+```
+
+
+
 ```{r setup, include=F}
 knitr::opts_chunk$set(message=F, warning=F, comment = "")
 ```

@@ -15,6 +15,21 @@ toc-title: "Table of Contents"
 bibliography: skeleton.bib
 ---
 
+```{r install-first, eval=F}
+# Heads up!!
+
+# Install these packages 
+# before running the report
+install.packages(c("hrbrthemes","dplyr",
+                   "ggplot2",
+                   "DT","devtools"))
+
+remotes::install_github("MPCA-data/mpcadb")
+remotes::install_github("MPCA-data/mncolors")
+remotes::install_github("MPCA-data/mpcaej")
+```
+
+
 ```{r setup, include=F}
 knitr::opts_chunk$set(message=F, warning=F, comment = "")
 ```
@@ -104,8 +119,9 @@ library(dplyr)
 ai_names <- get_ai(ai = c(420, 564, 878), 
                    keep_alt_names = T)
 
-# Drop the underscores from the column names
-names(ai_names) <- names(ai_names) %>% gsub("_", " ", .)
+# Drop underscores from column names
+names(ai_names) <- names(ai_names) %>% 
+                   gsub("_", " ", .)
 
 # Scrolly pretty table
 DT::datatable(ai_names, 
