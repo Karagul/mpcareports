@@ -1,3 +1,6 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
 ^web$
+^mpcareports\.Rcheck$
+^mpcareports.*\.tar\.gz$
+^mpcareports.*\.tgz$
