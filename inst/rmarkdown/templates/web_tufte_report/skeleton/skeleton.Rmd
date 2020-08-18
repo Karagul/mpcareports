@@ -10,7 +10,7 @@ output:
     number_sections: true
     toc: true
     toc_depth: 1
-    css:  ["mpca_style.css", "report_style.css"]
+    css: ["mpca_style.css", "report_style.css"]
     df_print: paged
     includes:
       in_header: header.html

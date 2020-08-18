@@ -3,10 +3,10 @@
 
 The package includes templates for making reports from R in the following formats:
 
-- Web report (HTML)
-- Web Tufte report with side column (HTML)
 - Word document with MPCA theme (Word)
-- PDF Tufte document with side column (PDF)
+- Web report with MPCA theme (HTML)
+- Web report with Tufte side column (HTML)
+- PDF report with Tufte side column (PDF)
 
 
 ## What is R Markdown?

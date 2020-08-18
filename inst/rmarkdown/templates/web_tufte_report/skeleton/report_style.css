@@ -1,0 +1,305 @@
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:200;src:local('Source Sans Pro ExtraLight'),local('SourceSansPro-ExtraLight'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdr.ttf) format('truetype');}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;src:local('Source Sans Pro Light'),local('SourceSansPro-Light'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;src:local('Source Sans Pro Regular'),local('SourceSansPro-Regular'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;src:local('Source Sans Pro SemiBold'),local('SourceSansPro-SemiBold'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf) format('truetype');}
+@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;src:local('Source Sans Pro Bold'),local('SourceSansPro-Bold'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf) format('truetype');}
+
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+
+p code {
+    color: #535353;
+    font-size: 1.6rem !important;
+    background-color: #008eaa38;
+}
+
+ol, ul {
+    font-size: 1.7rem;
+    letter-spacing: 0.05em;
+    width: 99%;
+}
+
+hr {
+    margin-top: -38px;
+    margin-bottom: 8px;
+    color: #a2a3a6;
+    height: 0.01em;
+    background-color: #a2a3a6;
+    width: 54%;
+    margin-left: 0;
+}
+
+.numbered {
+    margin-top: -53px;
+    margin-bottom: 32px;
+    margin-left: 10px;
+    height: 0.12em;
+    background-color: #00386585
+    width: 54%;
+}
+
+.numbered2 {
+    margin-top: -53px;
+    margin-bottom: 32px;
+    margin-left: 10px;
+    height: 0.12em;
+    background-color: #53565A;
+    width: 54%;
+}
+
+h1 .header-section-number {
+    background: #00386585;
+    color: white;
+    border-radius: 36px;
+    -moz-border-radius: 36px;
+    -webkit-border-radius: 36px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 54px;
+    margin-right: 4px;
+    margin-left: -30px;
+    text-align: center;
+    width: 54px;
+    font-size: 36px;
+}
+
+h2 > span, h3 > span, h4 > span, h5 > .header-section-number { display: none; }
+
+.title {
+  font-size: 52px !important;
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+  margin-left: 0px !important;
+  font-weight: 200 !important;
+}
+
+.subtitle {
+  font-weight: 200 !important;
+  font-size: 32px !important;
+  margin-top: 0px !important;
+  margin-bottom: 24px !important;
+  color: #008EAAFF !important;
+}
+
+.author p {
+    font-size: 1.8rem !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.05rem;
+    line-height: 1.1 !important;
+}
+
+h4.author {
+    font-size: 1.7rem !important;
+    letter-spacing: -0.02rem;
+    line-height: 0.7 !important;
+}
+
+address {
+    font-size: 1.5rem;
+    font-style: normal !important;
+    margin-bottom: 20px !important;
+}
+
+
+.date {
+  font-style: normal;
+  font-size: 1.7rem !important;
+  font-weight: 300;
+  margin-top: -217px !important;
+  margin-bottom: 230px !important;
+}
+
+#TOC {
+    margin-bottom: 36px;
+}
+
+#toc-title {
+    margin-top: 44px;
+    font-size: 2.7rem;
+    margin-bottom: 0;
+}
+
+blockquote, pre {
+    min-height: 20px;
+    padding: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 0;
+    width: 52.5%;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.05);
+}
+
+blockquote p { width: 98%; }
+
+blockquote footer { width: 98% !important; }
+
+.r {
+  margin-top: 1px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  padding: 10px !important;
+  background-color: #008eaa14;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: auto;
+}
+
+pre code {
+  font-size: 14px !important;
+}
+
+h1 {
+  font-size: 42px !important;
+  margin-top: 72px;
+  margin-bottom: 35px;
+  color: #003865FF;
+}
+
+h2 {
+  margin-top: 44px;
+  margin-bottom: 26px;
+  color: #003865FF;
+  font-size: 2.7rem;
+}
+
+h2.footer {
+  margin-top: 0;
+}
+
+h3 {
+  margin-top: 4px;
+  margin-bottom: 18px;
+}
+
+a {
+  color: #008DD8 !important;
+  text-decoration: none;
+}
+
+a:link {
+  box-shadow: none;
+  background: none;
+  text-shadow: none;
+}
+
+p {
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
+  font-size:  1.7rem !important;
+}
+
+body {
+  font-size: 16px !important;
+  line-height: 1.2;
+  max-width: 80%;
+}
+
+table {
+  border-top: 0;
+  border-bottom: 0;
+  font-size: inherit;
+}
+
+.marginnote, .sidenote {
+  font-size: 1.5rem;
+}
+
+.datatables {
+  max-width: 90%;
+}
+
+
+table tr {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+li { padding: 0.2rem 0 !important; }
+
+th { font-weight: normal !important; }
+
+table.dataTable caption {
+  margin: 0 auto;
+  clear: both;
+  text-align: left;
+  font-weight: bold;
+  font-size: 1.2rem;
+  line-height: 3rem;
+}
+
+
+.foot {
+    margin-top: 45px;
+    padding-top: 12px !important;
+    padding-bottom: 32px;
+    padding-left: 30px !important;
+    padding-right: 15px;
+    border-top: 1px solid #E5E5E5;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #eeeeee !important;
+    float: left;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: block;
+    width: 87.5%;
+}
+
+.foot p {
+  width: 100%;
+}
+
+.region-foot {
+    float: left;
+    display: block;
+    list-style: none !important;
+    color: #222222 !important;
+    font-weight: 200 !important;
+    width: 100%;
+}
+
+
+.block-title {
+    line-height: 1.1;
+    margin-bottom: 13px;
+    font-size: 2.3rem;
+    margin-top: 0;
+    color: #222222;
+    font-weight: 400;
+}
+
+.block {
+    margin-right: 7.1%;
+    float: left;
+    color: #222222 !important;
+    width: 26.1%;
+}
+
+.block a {
+    color: #222222 !important;
+    box-shadow: none;
+    text-shadow: none;
+    background: none;
+}
+
+.block li {
+    list-style: none !important;
+}
+
+.fa {
+    margin: 0 0.5em 0 0;
+}
+
