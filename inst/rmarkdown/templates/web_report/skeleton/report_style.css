@@ -1,10 +1,8 @@
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:200;src:local('Source Sans Pro ExtraLight'),local('SourceSansPro-ExtraLight'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3i94_wlxdr.ttf) format('truetype');}
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:300;src:local('Source Sans Pro Light'),local('SourceSansPro-Light'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ik4zwlxdr.ttf) format('truetype');}
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:400;src:local('Source Sans Pro Regular'),local('SourceSansPro-Regular'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xK3dSBYKcSV-LCoeQqfX1RYOo3qOK7g.ttf) format('truetype');}
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:600;src:local('Source Sans Pro SemiBold'),local('SourceSansPro-SemiBold'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3i54rwlxdr.ttf) format('truetype');}
-@font-face{font-family:'Source Sans Pro';font-style:normal;font-weight:700;src:local('Source Sans Pro Bold'),local('SourceSansPro-Bold'),url(https://fonts.gstatic.com/s/sourcesanspro/v13/6xKydSBYKcSV-LCoeQqfX1RYOo3ig4vwlxdr.ttf) format('truetype');}
 
-html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+.dropdown-menu {
+  min-width: 150px !important;
+
+}
 
 p code {
     color: #535353;
@@ -19,12 +17,12 @@ ol, ul {
 }
 
 hr {
-    margin-top: -38px;
+    margin-top: 18px;
     margin-bottom: 8px;
     color: #a2a3a6;
     height: 0.01em;
     background-color: #a2a3a6;
-    width: 54%;
+    width: 90%;
     margin-left: 0;
 }
 
@@ -70,6 +68,7 @@ h2 > span, h3 > span, h4 > span, h5 > .header-section-number { display: none; }
   margin-bottom: 10px !important;
   margin-left: 0px !important;
   font-weight: 200 !important;
+  clear: both;
 }
 
 .subtitle {
@@ -110,12 +109,14 @@ address {
 
 #TOC {
     margin-bottom: 36px;
+    clear: both;
 }
 
 #toc-title {
     margin-top: 44px;
-    font-size: 2.7rem;
     margin-bottom: 0;
+    font-size: 2.7rem;
+    clear: both;
 }
 
 blockquote, pre {
@@ -126,7 +127,7 @@ blockquote, pre {
     margin-top: 10px;
     margin-bottom: 10px;
     margin-left: 0;
-    width: 52.5%;
+    width: 90%;
     background-color: #f5f5f5;
     border: 1px solid #e3e3e3;
     border-radius: 4px;
@@ -194,12 +195,14 @@ p {
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
   font-size:  1.7rem !important;
+  width: 90%;
 }
 
 body {
   font-size: 16px !important;
   line-height: 1.2;
   max-width: 80%;
+  margin-left: 10%;
 }
 
 table {
@@ -243,7 +246,7 @@ table.dataTable caption {
 
 .foot {
     margin-top: 45px;
-    padding-top: 12px !important;
+    padding-top: 24px !important;
     padding-bottom: 32px;
     padding-left: 30px !important;
     padding-right: 15px;
@@ -255,7 +258,7 @@ table.dataTable caption {
     border: 1px solid #ddd;
     border-radius: 4px;
     display: block;
-    width: 87.5%;
+    width: 100%;
 }
 
 .foot p {
@@ -297,6 +300,10 @@ table.dataTable caption {
 
 .block li {
     list-style: none !important;
+}
+
+.block ul {
+    padding-left: 0;
 }
 
 .fa {

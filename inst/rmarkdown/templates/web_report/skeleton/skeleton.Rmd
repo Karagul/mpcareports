@@ -5,13 +5,13 @@ date:  '`r format(Sys.Date(), "%B %Y")`'
 author: "Rachel Carson, Senior Biologist; Yihui Xie, RStudio Scientist  \n\n      
          Environmental Analysis and Outcomes, MPCA"
 output:
-  tufte::tufte_html: 
-    tufte_variant: "envisioned"
+  html_document:
     number_sections: true
     toc: true
     toc_depth: 1
     css:  ["mpca_style.css", "report_style.css"]
     df_print: paged
+    code_download: true
     includes:
       in_header: header.html
       before_body: banner.html
@@ -21,18 +21,19 @@ toc-title: "Table of Contents"
 ---
  
 
-::: .{fullwidth}
+
 ```{r install-first, eval=F, full.width=T}
 # Read me!
 ## Install these packages before running the report
 
-install.packages(c("devtools","hrbrthemes","tidyverse","DT"))
+install.packages(c("devtools","hrbrthemes",
+                   "tidyverse","DT"))
 
 remotes::install_github("MPCA-data/mpcadb")
 remotes::install_github("MPCA-data/mncolors")
 remotes::install_github("MPCA-data/mpcaej")
 ```
-:::
+
 
 
 ```{r setup, include=F}
@@ -42,7 +43,7 @@ knitr::opts_chunk$set(message = F, warning = F, comment = "", eval = T)
 
 # Summary {-}
 
-`r tint::newthought("The goal")` of this project is to identify the four Pokemon^[Pokemon are a new invasive species in MN. See [Pokemen explosion in MN](https://en.wikipedia.org/wiki/Pok%C3%A9mon).] that are polluting the local stream and causing it to glow a beautiful translucent purple on several occasions.
+THE GOAL of this project is to identify the four Pokemon^[Pokemon are a new invasive species in MN. See [Pokemen explosion in MN](https://en.wikipedia.org/wiki/Pok%C3%A9mon).] that are polluting the local stream and causing it to glow a beautiful translucent purple on several occasions.
 
 This document was written and created with R Markdown, a flexible text format that provides easy export to a variety of formats such as PDFs, Word docs, PowerPoint, and Web sites. 
 
@@ -77,8 +78,6 @@ A large library of MPCA created photos and images are available in [MPCA's flick
 Here's an example turtle image:
 
 
-::: {.fullwidth}
-
 ```markdown
 ![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg)
 ```
@@ -106,7 +105,7 @@ Here's 3 tiny turtles on their way home.
 ![Runaway Turtle](turtle.jpg){width="25%"}
 ![Runaway Turtle](turtle.jpg){width="25%"}
 
-:::
+
 
 ## Add a list
 
@@ -140,11 +139,8 @@ Or create numbered lists by adding `1. ` in front of each item.
 
 ## Add a call-out box
 
-::: fullwidth
-
 You can create grey call-out boxes for special notes or quotes by adding the right carrot (`>`) —also known as the greater than sign— in front of text. 
 
-:::
 
 Like so:
 
@@ -171,7 +167,7 @@ More great Markdown features —like adding sortable tables and maps— appear b
 
 
 
-The table below shows a glimpse of the results. You can add a caption to your table by adding `caption="My caption"` to the `kable()` function as below.
+The table below shows a glimpse of the results. You can add a caption to your table by adding `caption = "My caption"` to the `kable()` function as below.
 
 ```{r, echo=T}
 knitr::kable(head(mtcars), 
@@ -198,8 +194,6 @@ data <- read_csv("")
 
 ## DELTA is where data lives 
 
-::: {.fullwidth}
-
 Explore all the data available in MPCA's DELTA database with the [RAINIER documentation](http://rainier/documentation/DataDictionary/DELTAW/index.html) pages.
 
 
@@ -215,6 +209,7 @@ Explore all the data available in MPCA's DELTA database with the [RAINIER docume
 
 
 ## Data glimpse
+
 For this project, facilities were pulled from MPCA's TEMPO database.   
 You can use the `mpcadb` package to access TEMPO from R.
 
@@ -249,7 +244,7 @@ DT::datatable(ai_names,
                              dom = 'ftip')) 
 ```
 
-:::
+
 
 ## _(help)_ Access spatial data from MN's GIS Rest API
 
@@ -258,13 +253,13 @@ DT::datatable(ai_names,
 
 # Charts
 
-To place figures in the margin you can use the **knitr** chunk option `fig.margin=TRUE`.
+To add figures and charts with a caption, you can add the `fig.cap = "My great caption` to the R chunk options.
 
 Here's an example using a fuel efficiency chart: 
 
-`{r fig-margin, fig.margin=TRUE, fig.cap="MPG vs Horsepower, colored by transmission."}`
+`{r, fig.cap="MPG vs Horsepower, colored by transmission."}`
 
-```{r fig-margin, fig.margin = TRUE, fig.cap = "**FIG 1.** MPG vs horsepower, colored by transmission.", fig.width=3.5, fig.height=3.5}
+```{r, fig.cap = "**FIG 1.** MPG vs horsepower, colored by transmission.", fig.width=5, fig.height=3.5}
 library(ggplot2)
 library(mncolors) #remotes::install_github("MPCA-data/mncolors")
 
@@ -284,7 +279,7 @@ ggplot(mtcars, aes(hp, mpg, color = Transmission)) +
 
 ## MN Colors
 
-::: {.fullwidth}
+
 
 Here's one way to set the colors for your plots to align with the MN state brand.
 
@@ -308,27 +303,33 @@ ggplot(diamonds, aes(carat, price)) +
                                     face  = 'bold'))
 ```
 
-:::
+
 
 
 # Analysis
 
 
-```{marginfigure}
+## Equations  
+
+We use the following equation to scale the Pokemon contribution to its relative size.  
+  
+
   for $x$ in $[a, b]$:
 $$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x)$$
-```
 
-We used the equation on the right to scale the Pokemon contribution to its relative size and spatial distribution in the watershed.
-  
-  
-To set figures to span the entire page use the `{r}` chunk option `fig.fullwidth = TRUE`.
 
-```{r fig-fullwidth, fig.width=10, fig.height=2, fig.fullwidth=T, fig.cap = "**FIG 2.** A full width figure."}
+<br>
 
+## Full page charts
+
+To set figures to span the entire page, use the R chunk option: `{r, fig.width = 10}`
+
+```{r, fig.width=10, fig.height=3, fig.cap="**FIG 2.** A full width chart."}
+# ```{r, fig.width=10, fig.height=3, fig.cap="**FIG 2.** A full width chart."}
 ggplot(diamonds, aes(carat, price)) + 
   geom_smooth() +
-  facet_grid(~ cut)
+  facet_grid(~ cut) +
+  theme_grey(base_size = 14) 
 ```
 
 
@@ -342,14 +343,11 @@ ggplot(diamonds, aes(carat, price)) +
 Leaflet maps are an easy way to add interactive maps to your report. Here's an example displaying the polygon shapefile of tribal nations located across MN.
 
 
-```{marginfigure}
-<br>
-<br>
-  
-Find shapefiles and spatial data in the [MN GEOCOMMONS](https://gisdata.mn.gov/).
-```
+>
+> Find shapefiles and spatial data in the [MN GEOCOMMONS](https://gisdata.mn.gov/).
+>  
 
-```{r full-map, fig.width=8.5, fig.height=5, fig.fullwidth=T, fig.cap="_Ref. MPCA Geocommons 2020-10-10_"}
+```{r full-map, fig.width=8.5, fig.height=5, fig.cap="_Ref. MPCA Geocommons 2020-10-10_"}
 library(mpcaej) #remotes::install_github("MPCA-data/mpcaej")
 library(leaflet)
 library(sf)
@@ -458,11 +456,11 @@ __And here it is:__
 
 # Conclusion
 
-You can add quotes or highlight some text with the `tint::quote_footer()` function.
+You can add quotes or highlight some text with the carrots `(>)` as well.
 
 > _I can win an argument on any topic, against any opponent. People know this, and steer clear of me at parties. Often, as a sign of their great respect, they don't even invite me._
 >
-> `r tint::quote_footer('--- Dave Barry')`
+> `r '--- Dave Barry'`
 
 
 ## References

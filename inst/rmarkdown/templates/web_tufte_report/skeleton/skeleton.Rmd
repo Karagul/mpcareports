@@ -313,23 +313,30 @@ ggplot(diamonds, aes(carat, price)) +
 
 # Analysis
 
-
+## Equations 
 ```{marginfigure}
   for $x$ in $[a, b]$:
 $$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x)$$
 ```
 
-We used the equation on the right to scale the Pokemon contribution to its relative size and spatial distribution in the watershed.
+We use the following equation to scale the Pokemon contribution to its relative size.
   
-  
-To set figures to span the entire page use the `{r}` chunk option `fig.fullwidth = TRUE`.
+## Full page charts  
 
-```{r fig-fullwidth, fig.width=10, fig.height=2, fig.fullwidth=T, fig.cap = "**FIG 2.** A full width figure."}
 
+To set figures to span the entire page use the `{r}` chunk option: `fig.fullwidth = TRUE`
+
+```{r, fig.fullwidth=T, fig.height=2.5, fig.cap="**FIG 2.** A full width chart."}
+#```{r, fig.fullwidth=TRUE, 
+#       fig.height=2.5, 
+#       fig.cap="**FIG 2.** A full width chart."}  
 ggplot(diamonds, aes(carat, price)) + 
   geom_smooth() +
-  facet_grid(~ cut)
+  facet_grid(~ cut) +
+  theme_grey(base_size = 12) 
 ```
+
+
 
 
 ## _(help)_ Non-detect and Censored data summaries
