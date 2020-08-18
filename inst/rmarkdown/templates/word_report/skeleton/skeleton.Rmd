@@ -15,11 +15,11 @@ toc-title: "Table of Contents"
  
 
 ::: {.fullwidth}
-```{r install-first, eval=F, full.width=T}
-# Heads up!
+```{r install-first, eval=F, full.width=T, echo=F}
+# Read me!
 ## Install these packages before running the report
 
-sinstall.packages(c("devtools","hrbrthemes","tidyverse","DT"))
+install.packages(c("devtools","hrbrthemes","tidyverse","DT"))
 
 remotes::install_github("MPCA-data/mpcadb")
 remotes::install_github("MPCA-data/mncolors")
