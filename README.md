@@ -1,5 +1,5 @@
 # mpcareports
-:bookmark_tabs: Report templates for R Markdown documents |  https://mpca-data.github.io/mpcareports/web/
+:bookmark_tabs: Report templates for R Markdown documents  |   https://mpca-data.github.io/mpcareports/web/
 
 The package includes templates for making reports from R in the following formats:
 
@@ -8,7 +8,7 @@ The package includes templates for making reports from R in the following format
 - Word document with MPCA theme (Word)
 - PDF Tufte document with side column (PDF)
 
-View the web example at [MPCA web report](https://mpca-data.github.io/mpcareports/web/).
+> View the web example at [MPCA web report](https://mpca-data.github.io/mpcareports/web/)
 
 ## What is R Markdown?
 
