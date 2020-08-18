@@ -21,7 +21,7 @@ toc-title: "Table of Contents"
 ---
  
 
-::: fullwidth
+::: .{fullwidth}
 ```{r install-first, eval=F, full.width=T}
 # Read me!
 ## Install these packages before running the report
@@ -77,16 +77,15 @@ A large library of MPCA created photos and images are available in [MPCA's flick
 Here's an example turtle image:
 
 
-::: fullwidth
+::: {.fullwidth}
 
 ```markdown
 ![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg)
 ```
-:::
+
 
 ![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg)
 
-::: fullwidth
 
 > **To change the image's size**
 >
@@ -97,7 +96,6 @@ Here's an example turtle image:
 >
 >  `![Runaway Turtle](turtle.jpg){width = 25%}`
 
-:::
 
 <br>
 
@@ -107,6 +105,8 @@ Here's 3 tiny turtles on their way home.
 ![Runaway Turtle](turtle.jpg){width="25%"}
 ![Runaway Turtle](turtle.jpg){width="25%"}
 ![Runaway Turtle](turtle.jpg){width="25%"}
+
+:::
 
 ## Add a list
 

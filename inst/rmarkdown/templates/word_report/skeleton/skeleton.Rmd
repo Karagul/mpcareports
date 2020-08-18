@@ -7,7 +7,7 @@ author: "Rachel Carson, Senior Biologist; Yihui Xie, RStudio Scientist  \n\n
 output:
   word_document:
     reference_docx: factsheet_styles.docx
-    toc: true
+    toc: false
     toc_depth: 1
 bibliography: skeleton.bib
 toc-title: "Table of Contents"
@@ -60,38 +60,40 @@ To insert an image use the syntax:
 ``` 
 
 
-A large library of MPCA created images and visuals are available on [MPCA's flickr](https://www.flickr.com/photos/mpcaphotos/albums) site.
+A large library of MPCA created photos and images are available in [MPCA's flickr library](https://www.flickr.com/photos/mpcaphotos/albums).
 
 
-Here's an example showing an image of a turtle:
-
-
-::: {.fullwidth}
+Here's an example turtle image:
 
 ```markdown
 ![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg)
 ```
-:::
 
 ![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg)
 
-::: {.fullwidth}
 
 > **To change the image's size**
 >
-> Add `{width = big_number}`
-> at the end of the line used to insert the image.
+> To size images in PDF documents, you can add `{out.width="85%"}` to an R chunk's options. You then use the `include_graphics()` function to add an image with the designated width.
 >
-> Here's how to add a tiny turtle by setting the image to only extend 25% across the available space:
->
->  `![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg){width = 25%}`
+> Here's how to show a giant turtle by setting the image width extend 85% across the available space:
+> 
 
-:::
+```{r, eval=F}
+{r, out.width="85%"}  
 
-![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg){width="25%"}
-![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg){width="25%"}  
+library(knitr)  
 
-![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg){width="25%"}
+include_graphics("turtle.png")
+```
+
+
+```{r, out.width="85%", echo=F}
+library(knitr)
+include_graphics("turtle.png")
+```
+
+
 
 ## Add a list
 

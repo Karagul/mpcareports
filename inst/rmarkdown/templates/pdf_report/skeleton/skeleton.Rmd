@@ -95,7 +95,7 @@ include_graphics(c("turtle.png", "turtle.png", "turtle.png"))
 ```
 
 
-```{r, out.width="25%", echo=F, fig.show="hold", fig.align="default"}
+```{r, out.width="25%", echo=F}
 library(knitr)
 include_graphics(c("turtle.png", "turtle.png", "turtle.png"))
 
