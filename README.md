@@ -8,7 +8,6 @@ The package includes templates for making reports from R in the following format
 - Word document with MPCA theme (Word)
 - PDF Tufte document with side column (PDF)
 
-> View the web example at [MPCA web report](https://mpca-data.github.io/mpcareports/web/)
 
 ## What is R Markdown?
 
