@@ -1,36 +1,35 @@
 ---
-title: "Project 1: Environmental Analysis"
+title: "Project 1: Environmental analysis"
 subtitle: "We did something great here"
-date:  '`r format(Sys.Date(), "%B %Y")`'
-author: "Rachel Carson, Senior Biologist; Yihui Xie, RStudio Scientist  
+date:  '`r format(Sys.Date(), "%B %Y ")`'
+author: "Rachel Carson, Senior Biologist; Yihui Xie, RStudio Scientist  \n\n      
          Environmental Analysis and Outcomes, MPCA"
 output:
-  tint::tintPdf: 
+  word_document:
+    reference_docx: factsheet_styles.docx
     toc: true
     toc_depth: 1
-toc-title: "Table of Contents"
 bibliography: skeleton.bib
----  
+toc-title: "Table of Contents"
+---
+ 
 
-
-```{r setup, include=F}
-# This R chunk sets the options for all R chunks in the document
-knitr::opts_chunk$set(message = F, warning = F, comment = "", eval = T, tidy = T)
-
-```
-
-
-
-```{r install-first, eval=F}
-# Read me!
+::: {.fullwidth}
+```{r install-first, eval=F, full.width=T}
+# Heads up!
 ## Install these packages before running the report
 
-install.packages(c("devtools", "hrbrthemes", 
-                   "tidyverse", "DT"))
+sinstall.packages(c("devtools","hrbrthemes","tidyverse","DT"))
 
 remotes::install_github("MPCA-data/mpcadb")
 remotes::install_github("MPCA-data/mncolors")
 remotes::install_github("MPCA-data/mpcaej")
+```
+:::
+
+
+```{r setup, include=F}
+knitr::opts_chunk$set(message = F, warning = F, comment = "", eval = T)
 ```
 
 
@@ -46,20 +45,17 @@ Here are some Markdown basics to get started writing R Markdown documents:
 
 To add a link in your text use the syntax:
 
-```r
+```markdown
 [Click here for MPCA](www.pca.state.mn.us)
 ```
 
-The reader will see the following: 
-
-[Click here for MPCA](www.pca.state.mn.us)
-
+The reader will see the following: [Click here for MPCA](www.pca.state.mn.us)
 
 ## Add an image
 
 To insert an image use the syntax:
 
-```r
+```markdown
 ![Text about my image](link_to_the_image.png)
 ``` 
 
@@ -67,40 +63,35 @@ To insert an image use the syntax:
 A large library of MPCA created images and visuals are available on [MPCA's flickr](https://www.flickr.com/photos/mpcaphotos/albums) site.
 
 
-Here's an example showing an image of a turtle image that is saved locally in the same folder as the `.Rmd` file:
+Here's an example showing an image of a turtle:
 
 
+::: {.fullwidth}
 
+```markdown
+![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg)
 ```
-![Runaway Turtle](turtle.png)
-```
+:::
 
+![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg)
 
-![Runaway Turtle](turtle.png)
-
+::: {.fullwidth}
 
 > **To change the image's size**
 >
-> To size images in PDF documents, you can add `{out.width="25%"}` to an R chunk options. You then use the `knitr::include_graphics()` function to insert an image with the designated width.
+> Add `{width = big_number}`
+> at the end of the line used to insert the image.
 >
-> Here's how to show 3 tiny turtles by setting the image width to only extend 25% across the available space:
-> 
+> Here's how to add a tiny turtle by setting the image to only extend 25% across the available space:
+>
+>  `![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg){width = 25%}`
 
-```{r, eval=F}
-{r, out.width="25%"}  
+:::
 
-library(knitr)  
+![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg){width="25%"}
+![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg){width="25%"}  
 
-include_graphics(c("turtle.png", "turtle.png", "turtle.png"))
-```
-
-
-```{r, out.width="25%", echo=F, fig.show="hold", fig.align="default"}
-library(knitr)
-include_graphics(c("turtle.png", "turtle.png", "turtle.png"))
-
-```
-
+![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg){width="25%"}
 
 ## Add a list
 
@@ -134,9 +125,11 @@ Or create numbered lists by adding `1. ` in front of each item.
 
 ## Add a call-out box
 
+::: {.fullwidth}
 
 You can create grey call-out boxes for special notes or quotes by adding the right carrot (`>`) —also known as the greater than sign— in front of text. 
 
+:::
 
 Like so:
 
@@ -160,6 +153,8 @@ Like so:
 More great Markdown features —like adding sortable tables and maps— appear below.
 
 # Data overview
+
+
 
 The table below shows a glimpse of the results. You can add a caption to your table by adding `caption="My caption"` to the `kable()` function as below.
 
@@ -187,6 +182,7 @@ data <- read_csv("")
 
 ## DELTA is where data lives 
 
+::: {.fullwidth}
 
 Explore all the data available in MPCA's DELTA database with the [RAINIER documentation](http://rainier/documentation/DataDictionary/DELTAW/index.html) pages.
 
@@ -237,6 +233,7 @@ DT::datatable(ai_names,
                              dom = 'ftip')) 
 ```
 
+:::
 
 ## _(help)_ Access spatial data from MN's GIS Rest API
 
@@ -271,13 +268,14 @@ ggplot(mtcars, aes(hp, mpg, color = Transmission)) +
 
 ## MN Colors
 
+::: {.fullwidth}
 
 Here's one way to set the colors for your plots to align with the MN state brand.
 
 ```{r set-colors}
 library(mncolors) #remotes::install_github("MPCA-data/mncolors") 
 library(ggplot2)
-#library(hrbrthemes)
+library(hrbrthemes)
 
 ggplot(diamonds, aes(carat, price)) +
   geom_smooth(aes(color = cut), size = 1.5, show.legend = F) +
@@ -287,13 +285,14 @@ ggplot(diamonds, aes(carat, price)) +
        subtitle = "Brownfield site classifications",
        caption  = "Source: EPA Data Mart 2018",
        x        = "Site score") +
- # scale_y_comma() +
- # theme_ipsum_rc() +
+  scale_y_comma() +
+  theme_ipsum_rc() +
   theme(plot.title   = element_text(color = mncolors(5, "blue")[5]),
         plot.caption = element_text(color = mncolors(5, "blue")[2], 
                                     face  = 'bold'))
 ```
 
+:::
 
 
 # Analysis
@@ -309,7 +308,7 @@ $$\frac{d}{dx}\left( \int_{a}^{x} f(u)\,du\right)=f(x)$$
   
 To set figures to span the entire page use the `{r}` chunk option `fig.fullwidth = TRUE`.
 
-```{r fig-fullwidth, fig.width=10, fig.height=2, fig.fullwidth=T, fig.cap = "**FIG 2.** A full width figure."}
+```{r fig-full-width, fig.width=10, fig.height=2, fig.fullwidth=T, fig.cap = "**FIG 2.** A full width figure."}
 
 ggplot(diamonds, aes(carat, price)) + 
   geom_smooth() +
@@ -426,5 +425,4 @@ knitr::write_bib(sub("^package:", "",
                      grep("package", search(), value=TRUE)),
                  file='skeleton.bib')
 ```
-
 

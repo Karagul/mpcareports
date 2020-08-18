@@ -1,7 +1,7 @@
 ---
 title: "Project 1: Environmental analysis"
 subtitle: "We did something great here"
-date:  'Published `r lubridate::today()`'
+date:  '`r format(Sys.Date(), "%B %Y")`'
 author: "Rachel Carson, Senior Biologist; Yihui Xie, RStudio Scientist  \n\n      
          Environmental Analysis and Outcomes, MPCA"
 output:
@@ -23,9 +23,9 @@ toc-title: "Table of Contents"
 
 ::: fullwidth
 ```{r install-first, eval=F, full.width=T}
-# Heads up!
-
+# Read me!
 ## Install these packages before running the report
+
 install.packages(c("devtools","hrbrthemes","tidyverse","DT"))
 
 remotes::install_github("MPCA-data/mpcadb")
@@ -44,21 +44,26 @@ knitr::opts_chunk$set(message = F, warning = F, comment = "", eval = T)
 
 `r tint::newthought("The goal")` of this project is to identify the four Pokemon^[Pokemon are a new invasive species in MN. See [Pokemen explosion in MN](https://en.wikipedia.org/wiki/Pok%C3%A9mon).] that are polluting the local stream and causing it to glow a beautiful translucent purple on several occasions.
 
-This document was written and created with R Markdown, a flexible text format that provides easy export to a variety of formats such as PDFs, Word docs, PowerPoint, and Web sites. Here are a few examples of writing in R Markdown.
+This document was written and created with R Markdown, a flexible text format that provides easy export to a variety of formats such as PDFs, Word docs, PowerPoint, and Web sites. 
+
+<br>
+
+Here are some Markdown basics to get started writing R Markdown documents:
 
 ## Add a link
 
-To add a link in your text use the format:
+To add a link in your text use:
 
 ```markdown
 [Click here for MPCA](www.pca.state.mn.us)
 ```
 
-The reader will see the following: [Click here for MPCA](www.pca.state.mn.us)
+[Click here for MPCA](www.pca.state.mn.us)
+
 
 ## Add an image
 
-You can insert an image into your document with the format:
+To insert an image use:
 
 ```markdown
 ![Text about my image](link_to_the_image.png)
@@ -66,14 +71,18 @@ You can insert an image into your document with the format:
 
 <br>
 
-A large library of MPCA created images and visuals are available on [MPCA's flickr](https://www.flickr.com/photos/mpcaphotos/albums) site.
+A large library of MPCA created photos and images are available in [MPCA's flickr library](https://www.flickr.com/photos/mpcaphotos/albums).
+
+  
+Here's an example turtle image:
 
 
-- Here's an example showing an image of a turtle:
+::: fullwidth
 
 ```markdown
 ![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg)
 ```
+:::
 
 ![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg)
 
@@ -81,16 +90,23 @@ A large library of MPCA created images and visuals are available on [MPCA's flic
 
 > **To change the image's size**
 >
-> Add `{width = big_number}`
+> Add `{width = "tiny_number%"}`
 > at the end of the line used to insert the image.
 >
-> Here's how to make a tiny turtle by setting the image to only extend 25% across the available space:
+> Here's how to show a tiny turtle by setting the image to only extend 25% across the available space:
 >
->  `![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg){width = 25%}`
+>  `![Runaway Turtle](turtle.jpg){width = 25%}`
 
 :::
 
-![Runaway Turtle](https://live.staticflickr.com/1747/40922837020_5c2d3133e3_w.jpg){width="25%"}
+<br>
+
+Here's 3 tiny turtles on their way home.  
+
+
+![Runaway Turtle](turtle.jpg){width="25%"}
+![Runaway Turtle](turtle.jpg){width="25%"}
+![Runaway Turtle](turtle.jpg){width="25%"}
 
 ## Add a list
 
@@ -149,7 +165,7 @@ Like so:
 
 <br>
 
-More great Markdown features —like adding sortable tables and maps— are shown below.
+More great Markdown features —like adding sortable tables and maps— appear below.
 
 # Data overview
 
@@ -158,7 +174,8 @@ More great Markdown features —like adding sortable tables and maps— are show
 The table below shows a glimpse of the results. You can add a caption to your table by adding `caption="My caption"` to the `kable()` function as below.
 
 ```{r, echo=T}
-knitr::kable(head(mtcars), caption = '**TABLE 1.** A subset of mtcars.')
+knitr::kable(head(mtcars), 
+             caption = '**TABLE 1.** Sample of car data')
 ```
 
 
