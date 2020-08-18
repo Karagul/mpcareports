@@ -3,7 +3,7 @@
 
 The package includes templates for making reports from R in the following formats:
 
-- Word document with MPCA theme (Word)
+- Word document with MPCA factsheet styles (Word)
 - Web report with MPCA theme (HTML)
 - Web report with Tufte side column (HTML)
 - PDF report with Tufte side column (PDF)
