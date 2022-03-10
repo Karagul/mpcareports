@@ -22,9 +22,8 @@ For example:
 Install `mpcareports` from GitHub:
 
 ``` r
-# 1. Install the 'devtools' package
-install.packages("devtools")
-library(remotes)
+# 1. Install the 'remotes' package
+install.packages("remotes")
 
 # 2. Install the development pkg from GitHub
 remotes::install_github("MPCA-data/mpcareports")
