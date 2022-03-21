@@ -65,9 +65,9 @@ h2 > span, h3 > span, h4 > span, h5 > .header-section-number { display: none; }
 .title {
   font-size: 52px;
   margin-top: 0;
-  margin-bottom: 6px;
+  margin-bottom: 0;
   margin-left: 0;
-  font-weight: 200;
+  font-weight: 300;
   clear: both;
 }
 
@@ -94,10 +94,16 @@ h4.author {
 
 .date {
   font-style: italic;
-  font-size: 1.8rem;
-  font-weight: 300;
-  margin-top: 28px;
-  margin-bottom: 8px;
+  font-size: 1.5rem;
+  font-weight: 350;
+  margin-top: 18px;
+  margin-bottom: 58px;
+  background-color: #84c8c4;
+  float: left;
+  padding: 2px;
+  padding-left: 8px;
+  padding-right: 10px;
+  border-radius: 6px;
 }
 
 #TOC {
